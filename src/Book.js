@@ -16,7 +16,7 @@ class Book extends Component {
             }}
           />
           <div className="book-shelf-changer">
-            <select>
+            <select defaultValue={this.props.book.shelf}>
               <option value="move" disabled>
                 Move to...
               </option>
