@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
 class Book extends Component {
+  handleChange = (book, shelf) => {
+    this.props.changeShelf(book, shelf);
+  };
+
   render() {
     return (
       <div className="book">
@@ -16,7 +20,12 @@ class Book extends Component {
             }}
           />
           <div className="book-shelf-changer">
-            <select defaultValue={this.props.book.shelf}>
+            <select
+              onChange={(e) =>
+                this.handleChange(this.props.book, e.target.value)
+              }
+              defaultValue={this.props.book.shelf}
+            >
               <option value="move" disabled>
                 Move to...
               </option>
