@@ -37,7 +37,7 @@ class BooksApp extends React.Component {
     BooksAPI.update(book, shelf).then(() => {
       BooksAPI.getAll().then((books) => {
         this.setState(() => ({
-          books: books,
+          books,
         }));
       });
     });
@@ -47,7 +47,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <Route exact path="/search">
-          <SearchBooks />
+          <SearchBooks search={this.searchBooks} />
         </Route>
 
         <Route exact path="/">
