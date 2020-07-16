@@ -54,12 +54,16 @@ class SearchBooks extends Component {
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid">
-            {this.state.books &&
-              this.state.books.map((book) => (
-                <Book book={book} key={book.id} />
-              ))}
-          </ol>
+          {Array.isArray(this.state.books) ? (
+            <ol className="books-grid">
+              {this.state.books &&
+                this.state.books.map((book) => (
+                  <Book book={book} key={book.id} />
+                ))}
+            </ol>
+          ) : (
+            <h2>No Results</h2>
+          )}
         </div>
       </div>
     );
