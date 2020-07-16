@@ -10,9 +10,7 @@ const BookShelf = (props) => {
           {props.books
             .filter((book) => book.shelf === props.shelf.shelf)
             .map((book) => (
-              <li key={book.id}>
-                <Book book={book} changeShelf={props.update} />
-              </li>
+              <Book book={book} changeShelf={props.update} key={book.id} />
             ))}
         </ol>
       </div>
