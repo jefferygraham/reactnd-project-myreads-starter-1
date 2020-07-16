@@ -47,7 +47,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <Route exact path="/search">
-          <SearchBooks search={this.searchBooks} />
+          <SearchBooks search={this.searchBooks} update={this.updateBookInfo} />
         </Route>
 
         <Route exact path="/">
