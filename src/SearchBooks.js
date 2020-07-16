@@ -24,8 +24,25 @@ class SearchBooks extends Component {
     this.searchBooks(query);
   };
 
+  getShelf = (id) => {
+    BooksAPI.get(id).then((book) => {
+      if (book.shelf !== "none") {
+        this.updateBook(book.id, book.shelf);
+      }
+      return book.shelf;
+    });
+  };
+
+  updateBook = (id, shelf) => {
+    let idx = this.state.books.findIndex((book) => book.id === id);
+    let books = [...this.state.books];
+    books[idx] = { ...books[idx], shelf: shelf };
+    this.setState(() => ({
+      books,
+    }));
+  };
+
   render() {
-    console.log(this.state.books);
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -60,6 +77,7 @@ class SearchBooks extends Component {
                 this.state.books.map((book) => (
                   <Book
                     book={book}
+                    shelf={book.shelf || this.getShelf(book.id)}
                     key={book.id}
                     changeShelf={this.props.update}
                   />

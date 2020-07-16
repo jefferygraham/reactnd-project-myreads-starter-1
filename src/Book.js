@@ -1,9 +1,22 @@
 import React, { Component } from "react";
+import ShelfChanger from "./ShelfChanger";
 
 class Book extends Component {
+  state = {
+    shelf: this.props.shelf,
+  };
+
   handleChange = (book, shelf) => {
     this.props.changeShelf(book, shelf);
   };
+
+  componentDidUpdate(prevProps) {
+    if (this.props.shelf !== prevProps.shelf) {
+      this.setState(() => ({
+        shelf: this.props.shelf,
+      }));
+    }
+  }
 
   render() {
     return (
@@ -20,22 +33,12 @@ class Book extends Component {
                   `url(${this.props.book.imageLinks.smallThumbnail})`,
               }}
             />
-            <div className="book-shelf-changer">
-              <select
-                onChange={(e) =>
-                  this.handleChange(this.props.book, e.target.value)
-                }
-                defaultValue={this.props.book.shelf}
-              >
-                <option value="move" disabled>
-                  Move to...
-                </option>
-                <option value="currentlyReading">Currently Reading</option>
-                <option value="wantToRead">Want to Read</option>
-                <option value="read">Read</option>
-                <option value="none">None</option>
-              </select>
-            </div>
+            <ShelfChanger
+              book={this.props.book}
+              shelf={this.state.shelf}
+              id={this.props.book.id}
+              changeShelf={this.handleChange}
+            />
           </div>
           <div className="book-title">{this.props.book.title}</div>
           <div className="book-authors">
