@@ -2,21 +2,9 @@ import React, { Component } from "react";
 import ShelfChanger from "./ShelfChanger";
 
 class Book extends Component {
-  state = {
-    shelf: this.props.shelf,
-  };
-
   handleChange = (book, shelf) => {
     this.props.changeShelf(book, shelf);
   };
-
-  componentDidUpdate(prevProps) {
-    if (this.props.shelf !== prevProps.shelf) {
-      this.setState(() => ({
-        shelf: this.props.shelf,
-      }));
-    }
-  }
 
   render() {
     return (
@@ -35,7 +23,7 @@ class Book extends Component {
             />
             <ShelfChanger
               book={this.props.book}
-              shelf={this.state.shelf}
+              shelf={this.props.book.shelf || "none"}
               id={this.props.book.id}
               changeShelf={this.handleChange}
             />
