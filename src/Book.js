@@ -23,7 +23,7 @@ class Book extends Component {
             />
             <ShelfChanger
               book={this.props.book}
-              shelf={this.props.book.shelf || "none"}
+              shelf={this.props.shelf}
               id={this.props.book.id}
               changeShelf={this.handleChange}
             />
