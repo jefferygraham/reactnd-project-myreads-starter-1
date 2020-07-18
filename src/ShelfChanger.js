@@ -10,7 +10,7 @@ class ShelfChanger extends Component {
       <div className="book-shelf-changer">
         <select
           onChange={(e) => this.handleChange(this.props.book, e.target.value)}
-          defaultValue={this.props.book.shelf || this.props.shelf}
+          defaultValue={this.props.shelf}
         >
           <option value="move" disabled>
             Move to...

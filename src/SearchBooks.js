@@ -9,6 +9,14 @@ class SearchBooks extends Component {
     books: [],
   };
 
+  getShelf = (book) => {
+    const foundBook = this.props.mainBooks.filter((b) => b.id === book.id);
+    if (foundBook.length > 0) {
+      return foundBook[0].shelf;
+    }
+    return "none";
+  };
+
   searchBooks = (query) => {
     BooksAPI.search(query).then((books) => {
       this.setState(() => ({
@@ -59,7 +67,7 @@ class SearchBooks extends Component {
                 this.state.books.map((book) => (
                   <Book
                     book={book}
-                    shelf={book.shelf || "none"}
+                    shelf={this.getShelf(book)}
                     key={book.id}
                     changeShelf={this.props.update}
                   />
