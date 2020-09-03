@@ -1,14 +1,14 @@
 {
-  "main.css": "/jefferygraham/reactnd-project-myreads-starter/static/css/main.b7359ebd.chunk.css",
-  "main.js": "/jefferygraham/reactnd-project-myreads-starter/static/js/main.a9b37038.chunk.js",
-  "main.js.map": "/jefferygraham/reactnd-project-myreads-starter/static/js/main.a9b37038.chunk.js.map",
-  "static/js/1.31ea8580.chunk.js": "/jefferygraham/reactnd-project-myreads-starter/static/js/1.31ea8580.chunk.js",
-  "static/js/1.31ea8580.chunk.js.map": "/jefferygraham/reactnd-project-myreads-starter/static/js/1.31ea8580.chunk.js.map",
-  "runtime~main.js": "/jefferygraham/reactnd-project-myreads-starter/static/js/runtime~main.7acecf56.js",
-  "runtime~main.js.map": "/jefferygraham/reactnd-project-myreads-starter/static/js/runtime~main.7acecf56.js.map",
-  "static/media/App.css": "/jefferygraham/reactnd-project-myreads-starter/static/media/arrow-drop-down.9d4e3f36.svg",
-  "static/css/main.b7359ebd.chunk.css.map": "/jefferygraham/reactnd-project-myreads-starter/static/css/main.b7359ebd.chunk.css.map",
-  "index.html": "/jefferygraham/reactnd-project-myreads-starter/index.html",
-  "precache-manifest.2ec210d2b852bca278ffc9e9274c8101.js": "/jefferygraham/reactnd-project-myreads-starter/precache-manifest.2ec210d2b852bca278ffc9e9274c8101.js",
-  "service-worker.js": "/jefferygraham/reactnd-project-myreads-starter/service-worker.js"
+  "main.css": "/reactnd-project-myreads-starter-1/static/css/main.45a7d569.chunk.css",
+  "main.js": "/reactnd-project-myreads-starter-1/static/js/main.f50f10a6.chunk.js",
+  "main.js.map": "/reactnd-project-myreads-starter-1/static/js/main.f50f10a6.chunk.js.map",
+  "static/js/1.31ea8580.chunk.js": "/reactnd-project-myreads-starter-1/static/js/1.31ea8580.chunk.js",
+  "static/js/1.31ea8580.chunk.js.map": "/reactnd-project-myreads-starter-1/static/js/1.31ea8580.chunk.js.map",
+  "runtime~main.js": "/reactnd-project-myreads-starter-1/static/js/runtime~main.1c06abd4.js",
+  "runtime~main.js.map": "/reactnd-project-myreads-starter-1/static/js/runtime~main.1c06abd4.js.map",
+  "static/media/App.css": "/reactnd-project-myreads-starter-1/static/media/arrow-drop-down.9d4e3f36.svg",
+  "static/css/main.45a7d569.chunk.css.map": "/reactnd-project-myreads-starter-1/static/css/main.45a7d569.chunk.css.map",
+  "index.html": "/reactnd-project-myreads-starter-1/index.html",
+  "precache-manifest.ee34759c7240bafa0ceb19725a8088f1.js": "/reactnd-project-myreads-starter-1/precache-manifest.ee34759c7240bafa0ceb19725a8088f1.js",
+  "service-worker.js": "/reactnd-project-myreads-starter-1/service-worker.js"
 }
