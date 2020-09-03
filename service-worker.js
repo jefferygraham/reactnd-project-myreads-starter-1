@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/jefferygraham/reactnd-project-myreads-starter/precache-manifest.2ec210d2b852bca278ffc9e9274c8101.js"
+  "/reactnd-project-myreads-starter-1/precache-manifest.ee34759c7240bafa0ceb19725a8088f1.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/jefferygraham/reactnd-project-myreads-starter/index.html", {
+workbox.routing.registerNavigationRoute("/reactnd-project-myreads-starter-1/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
